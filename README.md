@@ -1,2 +1,2 @@
 # php-mongo-web
-PHP web cliente for MongoDB
+PHP web client for MongoDB

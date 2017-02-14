@@ -1,5 +1,5 @@
 <?php
-namespace phpmongoweb\core\repository\context;
+namespace phpmongoweb\repository;
 
 class MongoDB {
     function __construct($connectionString) {

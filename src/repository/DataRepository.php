@@ -1,5 +1,5 @@
 <?php
-namespace phpmongoweb\core\repository;
+namespace phpmongoweb\repository;
 
 use phpmongoweb\core\interfaces\repository\IDataRepository;
 

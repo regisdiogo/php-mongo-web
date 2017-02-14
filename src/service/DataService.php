@@ -1,5 +1,5 @@
 <?php
-namespace phpmongoweb\core\service;
+namespace phpmongoweb\service;
 
 use phpmongoweb\core\interfaces\service\IDataService;
 
