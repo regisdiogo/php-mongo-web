@@ -1,0 +1,15 @@
+{
+  "name": "regisdiogo/php-mongo-web",
+  "description": "PHP web client for MongoDB",
+  "minimum-stability": "stable",
+  "license": "Apache License Version 2.0",
+  "authors": [
+    {
+      "name": "Regis Diogo de Siqueira Filho",
+      "email": "regisdiogof@gmail.com"
+    }
+  ],
+  "require-dev": {
+    "phpunit/phpunit": "^6.0"
+  }
+}
