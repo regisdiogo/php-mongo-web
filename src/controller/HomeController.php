@@ -2,7 +2,7 @@
 namespace phpmongoweb\controller;
 
 /**
- * @RoutePrefix("/api/home")
+ * @Route("/api/home/")
  */
 final class HomeController
 {
@@ -11,9 +11,9 @@ final class HomeController
     }
 
     /**
-     * @HttpGet("/hello")
+     * @HttpGet("")
      */
-    public function helloWorld() {
-
+    public function get() {
+        return "Hello world";
     }
 }

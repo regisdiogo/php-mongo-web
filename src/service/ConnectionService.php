@@ -5,7 +5,7 @@ use phpmongoweb\core\interfaces\service\IConnectionService;
 
 class ConnectionService implements IConnectionService {
 
-    public function helloWorld() {
+    public function helloWorld() : string {
         return "Hello world";
     }
 
