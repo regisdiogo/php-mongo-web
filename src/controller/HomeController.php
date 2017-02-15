@@ -1,9 +1,19 @@
 <?php
 namespace phpmongoweb\controller;
 
-final class HomeController {
-
-    public function __construct() {
+/**
+ * @RoutePrefix("/api/home")
+ */
+final class HomeController
+{
+    public function __construct()
+    {
     }
 
+    /**
+     * @HttpGet("/hello")
+     */
+    public function helloWorld() {
+
+    }
 }

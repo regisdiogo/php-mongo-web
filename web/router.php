@@ -1,5 +1,6 @@
 <?php
-function p($var = "") {
+function p($var = "")
+{
     echo "<pre>";
     if (!isset($var))
         print_r('null');
