@@ -48,7 +48,7 @@ final class App
     private static function configureDependencyInjection()
     {
         self::$container = new DependencyInjection();
-        self::$container->addRepository('IConnectionRepository', 'ConnectionRepository');
-        self::$container->addService('IConnectionService', 'ConnectionService');
+        self::$container->addRepository('IConnectionRepository', 'phpmongoweb\repository\ConnectionRepository');
+        self::$container->addService('IConnectionService', 'phpmongoweb\service\ConnectionService');
     }
 }

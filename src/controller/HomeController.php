@@ -2,7 +2,7 @@
 namespace phpmongoweb\controller;
 
 /**
- * @Route("/api/home/")
+ * @HttpRoute("/api/home/")
  */
 final class HomeController
 {
@@ -13,7 +13,24 @@ final class HomeController
     /**
      * @HttpGet("")
      */
-    public function get() {
+    public function get()
+    {
         return "Hello world";
+    }
+
+    /**
+     * @HttpGet("id")
+     */
+    public function getById()
+    {
+        return "Hello world";
+    }
+
+    /**
+     * @HttpPost("")
+     */
+    public function post()
+    {
+        return "Ok";
     }
 }

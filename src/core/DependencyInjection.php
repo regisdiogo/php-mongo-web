@@ -13,8 +13,18 @@ final class DependencyInjection
     public function addRepository($interface, $repository): void
     {
         $interface = "phpmongoweb\\core\\interfaces\\repository\\$interface";
-        $repository = "phpmongoweb\\repository\\$repository";
         $this->map->$interface = $repository;
+    }
+
+    public function addService($interface, $service): void
+    {
+        $interface = "phpmongoweb\\core\\interfaces\\service\\$interface";
+        $this->map->$interface = $service;
+    }
+
+    public function addInstance($type, $instance): void
+    {
+        throw new \Exception('Not implemented');
     }
 
     public function resolve($interface)
@@ -31,12 +41,5 @@ final class DependencyInjection
             return $reflector->newInstanceArgs($args);
         }
         return $reflector->newInstance();
-    }
-
-    public function addService($interface, $service): void
-    {
-        $interface = "phpmongoweb\\core\\interfaces\\service\\$interface";
-        $service = "phpmongoweb\\service\\$service";
-        $this->map->$interface = $service;
     }
 }
