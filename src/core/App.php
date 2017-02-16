@@ -1,21 +1,33 @@
 <?php
 namespace phpmongoweb\core;
 
-final class App {
-    public static function init() {
+final class App
+{
+    private static $container;
+
+    public static function init()
+    {
         self::setupAutoload();
+        self::configureDependencyInjection();
     }
 
-    public static function getSourceFolder(): string {
+    public static function getContainer(): DependencyInjection
+    {
+        return self::$container;
+    }
+
+    public static function getSourceFolder(): string
+    {
         return substr(__DIR__, 0, strlen(__DIR__) - 4);
     }
 
-    private static function setupAutoload(): void {
+    private static function setupAutoload(): void
+    {
         spl_autoload_register(function ($className) {
             $className = substr($className, strpos($className, '\\') + 1);
             $namespaces = [
+                'core',
                 'controller',
-                'core\annotation',
                 'core\interfaces\repository',
                 'core\interfaces\service',
                 'core\model',
@@ -31,5 +43,12 @@ final class App {
                 }
             }
         });
+    }
+
+    private static function configureDependencyInjection()
+    {
+        self::$container = new DependencyInjection();
+        self::$container->addRepository('IConnectionRepository', 'ConnectionRepository');
+        self::$container->addService('IConnectionService', 'ConnectionService');
     }
 }

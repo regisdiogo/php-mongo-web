@@ -1,6 +1,7 @@
 <?php
 namespace phpmongoweb\core\interfaces\repository;
 
-interface IConnectionRepository {
-
+interface IConnectionRepository
+{
+    public function getHelloWorld(): string;
 }
